@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+
+  
+  <bean id="emp" class="com.hp.Employee" autowire="byName">
+  	<property name="name" value="Shoeb"></property>
+  	<property name="ID" value="111"></property>
+ 
+  </bean>
+  
+   	<bean id="address" class="com.hp.Address">  
+			 <property name="city" value="London"></property>
+			<property name="zipCode" value="2213"></property>
+			</bean> 
+  <alias name="emp" alias="emp_obj"/>
+</beans>
